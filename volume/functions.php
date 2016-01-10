@@ -96,7 +96,7 @@ function pair2link($pairname)
         $answer = "<a href='https://www.ccedk.com/nbt-ppc' target='_blank'>CCEDK NBT/PPC</a>";
         break;
         case "nulagoon_btc_nbt":
-        $answer = "<a href='https://nulagoon.com/' target='_blank'>Nu Lagoon BTC/NBT</a>";
+        $answer = "<a href='https://nulagoon.com/' target='_blank'>NuLagoon Tube BTC/NBT</a>";
         break;
     }
 

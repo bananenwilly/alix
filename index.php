@@ -52,5 +52,3 @@ Please select
 </p>
 
 </center>
-</body>
-</html>
