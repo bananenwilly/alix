@@ -1,0 +1,68 @@
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid #231f20;
+    border-collapse: collapse;
+}
+td {
+    padding: 4px;
+    text-align: right;
+}
+td.red {
+    color:#ef3614;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 4px;
+    text-align: right;
+}
+th {
+    padding: 4px;
+    text-align: right;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table#t01 tr:nth-child(odd) {
+    background-color:#ffffff;
+}
+table#t01 th	{
+    background-color: #0074a0;
+    color: white;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #231f20;  
+     }
+      
+h1 {
+	color:#ffb800;	
+}
+p.ex {
+    color:#f9f9f9;
+    text-align: right;
+}
+p.red {
+    color:#ef3614;
+    font-size: 20px;
+    font-weight: 700;
+}
+a:link { color: #000000; text-decoration: none}
+a:visited { color: #000000; text-decoration: none}
+a:hover { color: #ffb800; text-decoration: none}
+a:active { color: #000000; text-decoration: none}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25B4\25BE" 
+}
+#top_ad {
+	text-align: center;
+}
+
+p.white_link {
+  color:white;
+  font-size:18px;
+  display: inline;
+}
+p:hover { color: #ffb800; text-decoration: none}
