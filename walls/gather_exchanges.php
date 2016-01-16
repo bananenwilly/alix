@@ -19,6 +19,6 @@ $query=query_exchanges($global_tolerance,$btc_usd,$nbt_cny,$nbt_eur);
 file_put_contents($data_munched, $query, LOCK_EX);
 
 #create chart points
-include("../charts/createcsv.php");
+include("../charts/createcsv_walls.php");
 
 ?>

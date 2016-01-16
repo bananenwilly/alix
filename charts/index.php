@@ -26,6 +26,7 @@ var _prum = [['id', '56689167abe53de950064484'],
 <div class="container">
 <body>
 <div align="right"><a href='https://www.coinerella.com' target='_blank'><img height='5%' width='5%' src='../img/coinerella_logo_really_small.png'</img></a></div>
+<center><a href='https://www.coinerella.com/index.php/ALix' target='_blank'><img width='5%' height='5%' src='../img/alix_v1_double_a_transparent_small.png'</img></a></center>
 <div id="sidebar" style="display: block;">
 <table id='t01'>
 <?php
@@ -33,16 +34,13 @@ include("../walls/pairs.php");
 include("chart_functions.php");
 
 if(!isset($_GET["select"])) {
-$selected_chart="4_hours_all_percent";
+$selected_chart="48h_4h_15min_combined_ma_percent";
 }
 else { $selected_chart=$_GET["select"]; }
 
-echo"<th>ALix</th></tr><th>Absolute Numbers</tr>";
+echo"<th>ALix Walls</th></tr><th>Absolute Numbers</tr>";
 echo"<td><a href=\"#\" onclick=\"setSelect('48_hours_all_nbt')\";>48 hours</td></tr>";
 echo"<td><a href=\"#\" onclick=\"setSelect('4_hours_all_nbt')\";>4 hours</td></tr>";
-echo"<th>Percent</th></tr>";
-echo"<td><a href=\"#\" onclick=\"setSelect('48_hours_all_percent')\";>48 hours</td></tr>";
-echo"<td><a href=\"#\" onclick=\"setSelect('4_hours_all_percent')\";>4 hours</a></td></tr>";
 echo"<th>Moving Average</th></tr>";
 echo"<td><a href=\"#\" onclick=\"setSelect('48h_4h_15min_combined_ma_percent')\";>48 hours combined</a></td></tr>";
 echo"<td><a href=\"#\" onclick=\"setSelect('4h_4h_15min_combined_ma_percent')\";>4 hours combined</a></td></tr>";

@@ -15,5 +15,7 @@ exit; #no bitcoin price available, sorry. will not gather data (offline?)
 query_exchanges();
 sleep(300);
 include("write_data.php");
+sleep(30);
+include("parse_json.php");
 
 ?>

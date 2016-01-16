@@ -39,7 +39,7 @@ a:active { color: #000000; text-decoration: none}
 </head>
 <body>
 <div align="right"><a href='https://www.coinerella.com' target='_blank'><img height='5%' width='5%' src='../img/coinerella_logo_really_small.png'</img></a></div>
-<center><a href='https://www.nubits.com' target='_blank'><img width='7%'' height='7%'' src='../img/nubits-logo-250.png'</img></a></center><br>
+<center><img width='7%'' height='7%'' src='../img/alix_v1_double_a_transparent_small.png'</img></center><br>
 <center><h1>Welcome to ALix by Coinerella</h1></center>
 <center>
 Please select
@@ -52,3 +52,5 @@ Please select
 </p>
 
 </center>
+</body>
+</html>

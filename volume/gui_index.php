@@ -21,7 +21,7 @@ var _prum = [['id', '56689167abe53de950064484'],
 </head>
 <body>
 <div align="right"><a href='https://www.coinerella.com' target='_blank'><img height='5%' width='5%' src='../img/coinerella_logo_really_small.png'</img></a></div>
-<center><a href='https://www.nubits.com' target='_blank'><img width='5%' height='5%' src='../img/nubits-logo-250.png'</img></a></center>
+<center><a href='https://www.coinerella.com/index.php/ALix' target='_blank'><img width='5%' height='5%' src='../img/alix_v1_double_a_transparent_small.png'</img></a></center>
 <center><h1>Tier 1 average volume for NuBits</h1></center>
 <br>
 <?php

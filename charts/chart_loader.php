@@ -51,13 +51,16 @@ $roll_period=$label_array["roll_period"];
 </script>
 <?php
 
-if($file_to_load !="48h_4h_15min_combined_ma_percent" && $file_to_load != "4h_4h_15min_combined_ma_percent")
+
+if($file_to_load =="48_hours_all_nbt" OR $file_to_load == "4_hours_all_nbt")
 {
 $print_br=false;
 $font_array=array("#0074a0", "#ef3614", "green");
 $button_array=get_display_buttons("standard");
 }
-else{
+
+if($file_to_load =="48h_4h_15min_combined_ma_percent" OR $file_to_load == "4h_4h_15min_combined_ma_percent")
+{
 $print_br=true;
 $font_array=array("#0074a0", "#ef3614", "green", '#ffb800', '#236A62');
 $button_array=get_display_buttons("combined_ma");

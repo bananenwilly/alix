@@ -681,8 +681,8 @@ $bter_nbt_cny=get_bter_nbt_cny($tolerance,$nbt_cny);
 $hitbtc_nbt_btc=get_hitbtc_nbt_btc($tolerance,$btc_usd);
 $southx_btc_nbt=get_southx_btc_nbt($tolerance, $btc_usd);
 $southx_nbt_usd=get_southx_nbt_usd($tolerance);
-$cryptsy_nbt_btc=get_cryptsy_nbt_btc($tolerance, $btc_usd);
-$cryptsy_nbt_usd=get_cryptsy_nbt_usd(1.6);
+#$cryptsy_nbt_btc=get_cryptsy_nbt_btc($tolerance, $btc_usd); - defunc
+#$cryptsy_nbt_usd=get_cryptsy_nbt_usd(1.6); - defunc
 $ccedk_nbt_usd=get_ccedk_nbt_usd($tolerance);
 $ccedk_nbt_btc=get_ccedk_nbt_btc($tolerance, $btc_usd);
 $ccedk_nbt_eur=get_ccedk_nbt_eur($tolerance, $nbt_eur);
@@ -700,8 +700,8 @@ array('pair'=>'bter_nbt_cny', 'amount' => $bter_nbt_cny),
 array('pair'=>'hitbtc_nbt_btc', 'amount' => $hitbtc_nbt_btc),
 array('pair'=>'southx_btc_nbt', 'amount' => $southx_btc_nbt),
 array('pair'=>'southx_nbt_usd', 'amount' => $southx_nbt_usd),
-array('pair'=>'cryptsy_nbt_btc', 'amount' => $cryptsy_nbt_btc),
-array('pair'=>'cryptsy_nbt_usd', 'amount' => $cryptsy_nbt_usd),
+#array('pair'=>'cryptsy_nbt_btc', 'amount' => $cryptsy_nbt_btc), - defunc
+#array('pair'=>'cryptsy_nbt_usd', 'amount' => $cryptsy_nbt_usd), - defunc
 array('pair'=>'ccedk_nbt_usd', 'amount' => $ccedk_nbt_usd),
 array('pair'=>'ccedk_nbt_btc', 'amount' => $ccedk_nbt_btc),
 array('pair'=>'ccedk_nbt_eur', 'amount' => $ccedk_nbt_eur),

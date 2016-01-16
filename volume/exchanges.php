@@ -370,8 +370,8 @@ $poloniex_btc_nbt_24=get_poloniex_btc_nbt();
 $bittrex_btc_nbt_24=get_bittrex_btc_nbt();
 $southx_btc_nbt_24=get_southx_btc_nbt($btc_usd);
 $southx_nbt_usd_24=get_southx_nbt_usd();
-$cryptsy_nbt_btc_24=get_cryptsy_nbt_btc();
-$cryptsy_nbt_usd_24=get_cryptsy_nbt_usd();
+#$cryptsy_nbt_btc_24=get_cryptsy_nbt_btc(); - defunc
+#$cryptsy_nbt_usd_24=get_cryptsy_nbt_usd(); - defunc
 $bter_nbt_cny_24=get_bter_nbt_cny();
 $bter_nbt_btc_24=get_bter_nbt_btc();
 $ccedk_nbt_usd_24=get_ccedk_nbt_usd();
@@ -390,8 +390,8 @@ array('pair'=>'poloniex_btc_nbt', 'amount' => "$poloniex_btc_nbt_24"),
 array('pair'=>'bittrex_btc_nbt', 'amount' => "$bittrex_btc_nbt_24"),
 array('pair'=>'southx_btc_nbt', 'amount' => "$southx_btc_nbt_24"),
 array('pair'=>'southx_nbt_usd', 'amount' => "$southx_nbt_usd_24"),
-array('pair'=>'cryptsy_nbt_btc', 'amount' => "$cryptsy_nbt_btc_24"),
-array('pair'=>'cryptsy_nbt_usd', 'amount' => "$cryptsy_nbt_usd_24"),
+#array('pair'=>'cryptsy_nbt_btc', 'amount' => "$cryptsy_nbt_btc_24"), - defunc
+#array('pair'=>'cryptsy_nbt_usd', 'amount' => "$cryptsy_nbt_usd_24"), - defunc
 array('pair'=>'bter_nbt_cny', 'amount' => "$bter_nbt_cny_24"),
 array('pair'=>'bter_nbt_btc', 'amount' => "$bter_nbt_btc_24"),
 array('pair'=>'ccedk_nbt_usd', 'amount' => "$ccedk_nbt_usd_24"),
