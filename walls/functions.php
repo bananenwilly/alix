@@ -123,7 +123,15 @@ function get_avg ($number_of_lines)
 
 function calculate_ma($pathtofile)
 {
-$file=json_decode(file_get_contents($pathtofile),true);
+$loadfile=file_get_contents($pathtofile);
+
+if(!$loadfile) #something's wrong with the file. sleep 5, try again.
+{
+    sleep (5);
+    $loadfile=file_get_contents($pathtofile);
+}
+
+$file=json_decode($loadfile, true);
 $total_ask=0;
 $total_bid=0;
 $total_both=0;

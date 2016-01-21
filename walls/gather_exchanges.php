@@ -15,7 +15,8 @@ writelog("all", "no_bitcoin_price", "unresolved");
 exit; #no bitcoin price available, sorry. will not gather data (offline?)
 }
 
-$query=query_exchanges($global_tolerance,$btc_usd,$nbt_cny,$nbt_eur);
+$timestamp=time();
+$query=query_exchanges($timestamp,$global_tolerance,$btc_usd,$nbt_cny,$nbt_eur);
 file_put_contents($data_munched, $query, LOCK_EX);
 
 #create chart points

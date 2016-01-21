@@ -667,7 +667,7 @@ return($orderbook);
 }
 
 
-function query_exchanges($tolerance,$btc_usd,$nbt_cny,$nbt_eur)
+function query_exchanges($query_time,$tolerance,$btc_usd,$nbt_cny,$nbt_eur)
 {
 $total_ask=0;
 $total_bid=0;
@@ -690,7 +690,7 @@ $nulagoon_btc_nbt=get_nulagoon_btc_nbt($tolerance, $btc_usd);
 
 //write exchanges into walls_data.dat
 $data=array(
-'timestamp' => time(),
+'timestamp' => $query_time,
 'btc_usd' => "$btc_usd",
 'exchanges' => array(
 array('pair'=>'poloniex_btc_nbt', 'amount' => $poloniex_btc_nbt),
@@ -732,23 +732,23 @@ $totals=array(
 $data=array_replace_recursive($data, $totals);
 
 #get avgs
-$var=get_avg(15);
+$var=get_avg(15); #15 minutes
 $var=json_encode($var);
 file_put_contents($data_15, $var, LOCK_EX);
 
-$var=get_avg(240);
+$var=get_avg(240); #4 hours
 $var=json_encode($var);
 file_put_contents($data_4h, $var, LOCK_EX);
 
 #calculate ma 15
-$avg15=calculate_ma("data/last15.dat");
+$avg15=calculate_ma($data_15);
 $avg15_array=array(
 '15min_avg' => $avg15
 );
 $data=array_replace_recursive($data, $avg15_array);
 
 #calculate ma 4h
-$avg4h=calculate_ma("data/last4h.dat");
+$avg4h=calculate_ma($data_4h);
 $avg4h_array=array(
 '4h_avg' => $avg4h
 );

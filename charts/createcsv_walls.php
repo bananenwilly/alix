@@ -58,7 +58,10 @@ foreach($data as $data_line)
 		$total_bid_percent_15min=$data_line["15min_avg"]["total_bid_percent"];
 		$writeln="$time,$total_ask_percent_4h,$total_bid_percent_4h,$total_ask_percent_15min,$total_bid_percent_15min,100";
 
+		if($total_ask_percent_4h > 0 && $total_bid_percent_4h > O && $total_ask_percent_15min > 0 && $total_bid_percent_15min > 0)
+		{
 		file_put_contents("/var/www/alix/charts/data/$filename","$writeln \n", FILE_APPEND );
+		}
 	}
 }
 
@@ -80,7 +83,10 @@ foreach($data as $data_line)
 		$total_bid_percent_15min=$data_line["15min_avg"]["total_bid_percent"];
 		$writeln="$time,$total_ask_percent_4h,$total_bid_percent_4h,$total_ask_percent_15min,$total_bid_percent_15min,100";
 
+		if($total_ask_percent_4h > 0 && $total_bid_percent_4h > O && $total_ask_percent_15min > 0 && $total_bid_percent_15min > 0)
+		{
 		file_put_contents("/var/www/alix/charts/data/$filename","$writeln \n", FILE_APPEND );
+		}
 	}
 }
 ?>
