@@ -103,5 +103,20 @@ function pair2link($pairname)
 return $answer;
 }
 
+function file_get_tail ($file, $n_lines)
+{
+    $before = microtime(true);
+
+    $array=file($file); #less optimal the larger the file gets
+    $end_line=count($array);
+    $array=array_reverse($array);
+
+    for ($i=0; $i < $n_lines; $i++)
+    {
+        $new_array[]=$array[$i];
+    }
+
+    return($new_array);
+}
 
 ?>

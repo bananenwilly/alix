@@ -44,6 +44,10 @@ echo"<td><a href=\"#\" onclick=\"setSelect('4_hours_all_nbt')\";>4 hours</td></t
 echo"<th>Moving Average</th></tr>";
 echo"<td><a href=\"#\" onclick=\"setSelect('48h_4h_15min_combined_ma_percent')\";>48 hours combined</a></td></tr>";
 echo"<td><a href=\"#\" onclick=\"setSelect('4h_4h_15min_combined_ma_percent')\";>4 hours combined</a></td></tr>";
+echo"<th>ALix Volume</th></tr>";
+echo"<td><a href=\"#\" onclick=\"setSelect('360d_volume')\";>Historic</a></td></tr>";
+echo"<th>Pools</th></tr>";
+echo"<td><a href=\"#\" onclick=\"setSelect('48_hours_nupool_poloniex')\";>NuPool Poloniex</a></td></tr>";
 echo "</table>";
 echo "</div>"; #end of sidebar
 ?>

@@ -14,8 +14,8 @@ $roll_period=$label_array["roll_period"];
 <head>
 <script type="text/javascript" src="js/dygraph-combined-dev.js"></script>
 <style>
-#loaded .dygraph-title { font-size: 36px; color:#ffb800;}
-#loaded .dygraph-ylabel { font-size: 18px; color:#ffb800;}
+#loaded .dygraph-title { font-size: 36px; color:#ffb800; margin: -10px;}
+#loaded .dygraph-ylabel { font-size: 18px; color:#ffb800; margin: -10px;}
 #loaded .dygraph-axis-label.dygraph-axis-label-x { font-size: 18px; color:white;}
 #loaded .dygraph-axis-label.dygraph-axis-label-y { font-size: 18px; color:white;}
 
@@ -38,7 +38,7 @@ $roll_period=$label_array["roll_period"];
       title: x_title_label,  
       ylabel: x_liquidity_label, 
       legend: 'always',
-      colors: ['#0074a0', '#ef3614', 'green', '#ffb800', '#236A62'],
+      colors: ['#0074a0', '#ee3a23', '#019d4d', '#ffb800', '#236A62'],
       showRoller: x_roller,
       rollPeriod: x_roll_period,
       labelsKMB: true
@@ -52,18 +52,25 @@ $roll_period=$label_array["roll_period"];
 <?php
 
 
-if($file_to_load =="48_hours_all_nbt" OR $file_to_load == "4_hours_all_nbt")
+if($file_to_load =="48_hours_all_nbt" OR $file_to_load == "4_hours_all_nbt" OR $file_to_load =="48_hours_nupool_poloniex")
 {
-$print_br=false;
-$font_array=array("#0074a0", "#ef3614", "green");
-$button_array=get_display_buttons("standard");
+  $print_br=false;
+  $font_array=array("#0074a0", "#ee3a23", "#019d4d");
+  $button_array=get_display_buttons("standard");
 }
 
 if($file_to_load =="48h_4h_15min_combined_ma_percent" OR $file_to_load == "4h_4h_15min_combined_ma_percent")
 {
-$print_br=true;
-$font_array=array("#0074a0", "#ef3614", "green", '#ffb800', '#236A62');
-$button_array=get_display_buttons("combined_ma");
+  $print_br=true;
+  $font_array=array("#0074a0", "#ee3a23", "#019d4d", '#ffb800', '#236A62');
+  $button_array=get_display_buttons("combined_ma");
+}
+
+if($file_to_load == "360d_volume")
+{
+  $print_br=true;
+  $font_array=array("#0074a0", "#ee3a23", "#019d4d", '#ffb800', '#236A62');
+  $button_array=get_display_buttons("360d_volume");
 }
 
 echo "<font color=\"white\"><br><b>Display: </b></font>";
@@ -72,12 +79,13 @@ if($print_br) {echo "<br>";}
 foreach($button_array as $key=>$button_name)
 {
 	$color=$font_array[$key];
-echo "<input type=checkbox id=$key onClick=\"load_show(this)\" checked>";
-echo "<label for=$key><font color=\"$color\"> $button_name</font></label>";
-if($print_br) {echo "<br>";}
+  echo "<input type=checkbox id=$key onClick=\"load_show(this)\" checked>";
+  echo "<label for=$key><font color=\"$color\"> $button_name</font></label>";
+  if($print_br) {echo "<br>";}
 }
 
 ?>
+
 <div align="right">
   <?php echo "<a href=\"?select=$file_to_load\"><p class=\"white_link\">link to this chart</p></a>";?>
 </div>

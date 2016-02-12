@@ -2,7 +2,7 @@ table {
     width:100%;
 }
 table, th, td {
-    border: 1px solid #231f20;
+    border: 1px solid #231f1f;
     border-collapse: collapse;
 }
 td {
@@ -22,12 +22,12 @@ table#t01 tr:nth-child(odd) {
 }
 table#t01 th	{
     background-color: #0074a0;
-    color: white;
+    color: #ffffff;
 }
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    background-color: #231f20;  
+    background-color: #231f1f;  
     }
 h1 {
 	color:#ffb800;	
@@ -37,7 +37,7 @@ p.header {
 	text-align: center;
 }
 p.white_link {
-	color:white;
+	color:#ffffff;
 	font-size:18px;
     display: inline;
 }
@@ -57,4 +57,8 @@ a:active { color: #000000; text-decoration: none}
 
 #banner { text-align: center; margin:0 0 5px 0; }
 #chart { margin:5px 0 5px 0; padding: 50px; }
-#footer { text-align: center; width:100%; height:20px; margin:5px 0 0 0; }
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
