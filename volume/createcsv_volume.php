@@ -1,6 +1,11 @@
 <?php
 date_default_timezone_set('UTC');
 
+if(!function_exists("file_get_tail"))
+{
+	include("functions.php");
+}
+
 $tail_file="/var/www/alix/volume/data/totals_history.dat";
 
 $frames_array=array(

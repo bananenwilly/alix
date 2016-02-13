@@ -10,7 +10,7 @@ $fp = fopen(".lock_walls", "r+");
 
 if (flock($fp, LOCK_EX)) {
 	#we have a lock - let's go. 
-	echo "I have a lock";
+
 	#get fiat prices
 	$btc_usd=get_btc_usd();
 	$nbt_cny=get_nbt_cny($btc_usd);
@@ -31,12 +31,10 @@ if (flock($fp, LOCK_EX)) {
 
 	#create chart points
 	include("../charts/createcsv_walls.php");
-	sleep(60);
 	#unlock if we locked
-	flock($fp, LOCK_UN); // Gib Sperre frei
+	flock($fp, LOCK_UN); 
 }
 else {
 	writelog("all", "file_locked", "unresolved"); 
-	echo "I don't have a lock";
 }
 ?>
