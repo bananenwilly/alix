@@ -89,7 +89,7 @@ return($bittrex_btc_nbt_24);
 
 //southx BTC-NBT
 function get_southx_btc_nbt ($btc_usd) {
-$url = 'https://www.southxchange.com/api/price/btc/nbt';
+$url = 'https://www.southxchange.com/api/price/btc/us-nbt';
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 
@@ -112,7 +112,7 @@ return($southx_btc_nbt_24);
 
 //southx NBT-USD
 function get_southx_nbt_usd() {
-$url = 'https://www.southxchange.com/api/price/nbt/usd';
+$url = 'https://www.southxchange.com/api/price/us-nbt/usd';
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 

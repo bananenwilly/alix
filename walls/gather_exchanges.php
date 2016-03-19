@@ -2,13 +2,13 @@
 include('config.php');
 include('logger.php');
 include('exchanges.php');
-include("functions.php");
-error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+include('functions.php');
+#error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
 
 #try to open lock file
-$fp = fopen(".lock_walls", "r+");
+#$fp = fopen(".lock_walls", "r+");
 
-if (flock($fp, LOCK_EX)) {
+#if (flock($fp, LOCK_EX)) {
 	#we have a lock - let's go. 
 
 	#get fiat prices
@@ -21,6 +21,16 @@ if (flock($fp, LOCK_EX)) {
 	writelog("all", "no_bitcoin_price", "unresolved"); 
 	exit; #no bitcoin price available, sorry. will not gather data (offline?)
 	}
+	if (!$nbt_cny)
+	{
+	writelog("all", "no_cny_price", "unresolved"); 
+	exit; #no cny price available, sorry. will not gather data (offline?)
+	}
+	if (!$nbt_eur)
+	{
+	writelog("all", "no_eur_price", "unresolved"); 
+	exit; #no eur price available, sorry. will not gather data (offline?)
+	}
 
 	#do the query
 	$timestamp=time();
@@ -32,9 +42,9 @@ if (flock($fp, LOCK_EX)) {
 	#create chart points
 	include("../charts/createcsv_walls.php");
 	#unlock if we locked
-	flock($fp, LOCK_UN); 
-}
-else {
-	writelog("all", "file_locked", "unresolved"); 
-}
+#	flock($fp, LOCK_UN); 
+#}
+#else {
+#	writelog("all", "file_locked", "unresolved"); 
+#}
 ?>
