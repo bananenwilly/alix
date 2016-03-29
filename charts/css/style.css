@@ -57,8 +57,7 @@ a:active { color: #000000; text-decoration: none}
 
 #banner { text-align: center; margin:0 0 5px 0; }
 #chart { margin:5px 0 5px 0; padding: 50px; }
-#footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+p.footer_link {
+    display: inline;
+    color: white;
 }

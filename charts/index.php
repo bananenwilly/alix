@@ -54,11 +54,13 @@ echo "</div>"; #end of sidebar
 <br>
  <div id="chart" align="center"></div>​
 <?php echo "<script>setSelect(\"$selected_chart\");</script>";?>
-<div id="footer" align="center">
-<a href="https://alix.coinerella.com/walls"><p class="white_link">ALix Walls -</p></a>
-<a href="https://alix.coinerella.com/volume"><p class="white_link"> ALix Volume -</p></a>
-<a href="https://alix.coinerella.com/charts"><p class="white_link"> ALix Charts -</p></a>
-<a href="https://www.coinerella.com/index.php/ALix" target="_blank"><p class="white_link"> About ALix</p></a>
  </div>
+<footer align="center">
+	<a href="https://alix.coinerella.com/walls"><p class="footer_link">ALix Walls -</p></a>
+	<a href="https://alix.coinerella.com/volume"><p class="footer_link"> ALix Volume -</p></a>
+	<a href="https://alix.coinerella.com/charts"><p class="footer_link"> ALix Charts -</p></a>
+	<a href="https://alix.coinerella.com/panel"><p class="footer_link"> ALix Panel -</p></a>
+	<a href="https://www.coinerella.com/index.php/ALix" target="_blank"><p class="footer_link"> About ALix</p></a>
+</footer>
 </body>
 </html>

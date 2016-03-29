@@ -63,10 +63,10 @@ function pair2link($pairname)
         $answer = "<a href='https://www.bittrex.com/Market/Index?MarketName=BTC-NBT' target='_blank'>Bittrex BTC/NBT</a>";
         break;
         case "southx_btc_nbt":
-        $answer = "<a href='https://www.southxchange.com/Market/Book/BTC/NBT' target='_blank'>southXchange BTC/NBT</a>";
+        $answer = "<a href='https://www.southxchange.com/Market/Book/BTC/US-NBT' target='_blank'>southXchange BTC/NBT</a>";
         break;
         case "southx_nbt_usd":
-        $answer = "<a href='https://www.southxchange.com/Market/Book/NBT/USD' target='_blank'>southXchange NBT/USD</a>";
+        $answer = "<a href='https://www.southxchange.com/Market/Book/US-NBT/USD' target='_blank'>southXchange NBT/USD</a>";
         break;
         case "cryptsy_nbt_btc":
         $answer = "<a href='https://www.cryptsy.com/markets/view/NBT_BTC' target='_blank'>Cryptsy NBT/BTC</a>";
@@ -84,16 +84,16 @@ function pair2link($pairname)
         $answer = "<a href='https://hitbtc.com/exchange/NBTBTC' target='_blank'>HitBTC NBT/BTC</a>";
         break;
         case "ccedk_nbt_usd":
-        $answer = "<a href='https://www.ccedk.com/nbt-usd' target='_blank'>CCEDK NBT/USD</a>";
+        $answer = "<a href='https://www.ccedk.com/us-nbt-usd' target='_blank'>CCEDK NBT/USD</a>";
         break;
         case "ccedk_nbt_eur":
-        $answer = "<a href='https://www.ccedk.com/nbt-eur' target='_blank'>CCEDK NBT/EUR</a>";
+        $answer = "<a href='https://www.ccedk.com/us-nbt-eur' target='_blank'>CCEDK NBT/EUR</a>";
         break;
         case "ccedk_nbt_btc":
-        $answer = "<a href='https://www.ccedk.com/nbt-btc' target='_blank'>CCEDK NBT/BTC</a>";
+        $answer = "<a href='https://www.ccedk.com/us-nbt-btc' target='_blank'>CCEDK NBT/BTC</a>";
         break;
         case "ccedk_nbt_ppc":
-        $answer = "<a href='https://www.ccedk.com/nbt-ppc' target='_blank'>CCEDK NBT/PPC</a>";
+        $answer = "<a href='https://www.ccedk.com/us-nbt-ppc' target='_blank'>CCEDK NBT/PPC</a>";
         break;
         case "nulagoon_btc_nbt":
         $answer = "<a href='https://nulagoon.com/' target='_blank'>NuLagoon Tube BTC/NBT</a>";

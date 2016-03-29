@@ -12,6 +12,8 @@ return ($return);
 //get btc-usd price
 function get_btc_usd()
 {
+$btc_usd=false;
+
 $url = 'https://api.bitfinex.com/v1/pubticker/btcusd/';
 $content = file_get_contents($url);
 $json = json_decode($content, true);
@@ -41,13 +43,17 @@ return($btc_usd);
 //get nbt/cny price
 function get_nbt_cny($btc_usd)
 {
+$nbt_cny = false;
+
 $url = 'https://www.okcoin.cn/api/ticker.do';
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 
 	if(check_value($json['ticker']['last']))
  	{
-		$nbt_cny=$json['ticker']['last']/$btc_usd;
+		$nbt_cny=$json['ticker']['last'];
+		$nbt_cny/=$btc_usd;
+		$nbt_cny*=0.985;
 	}
 
 	if(!$nbt_cny){
@@ -68,6 +74,8 @@ return($nbt_cny);
 //get nbt/eur price
 function get_nbt_eur()
 {
+$nbt_eur = false; 
+
 $url = 'http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json';
 $content = file_get_contents($url);
 $json = json_decode($content, true);
@@ -187,7 +195,7 @@ return($orderbook);
 
 //southx BTC-NBT
 function get_southx_btc_nbt($search_tolerance,$btc_usd) {
-$url = 'https://www.southxchange.com/api/book/btc/nbt';
+$url = 'https://www.southxchange.com/api/book/btc/us-nbt';
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 $ask_total=0;
@@ -232,7 +240,7 @@ return($orderbook);
 
 //southx NBT-USD
 function get_southx_nbt_usd($search_tolerance) {
-$url = 'https://www.southxchange.com/api/book/nbt/usd';
+$url = 'https://www.southxchange.com/api/book/us-nbt/usd';
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 $ask_total=0;
@@ -373,7 +381,7 @@ if (!$json["result"]) {
 else {
 	$tolerance=($nbt_cny*$search_tolerance)/100;
 	$ask_price=$nbt_cny+$tolerance;
-   $bid_price=$nbt_cny-$tolerance;
+    $bid_price=$nbt_cny-$tolerance;
 
 	foreach ($json["asks"] as $item)
 		{

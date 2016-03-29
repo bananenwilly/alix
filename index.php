@@ -47,6 +47,7 @@ Please select
 <h2><a href='volume'>Volume</a><br>  
 <a href='walls'>Walls</a><br>
 <a href='charts'>Charts</a><br>
+<a href='panel'>Panel</a><br>
 <a href='https://www.coinerella.com/index.php/ALix' target="_blank">About</a>
 </h2>
 </p>
