@@ -629,11 +629,11 @@ return($orderbook);
 
 //NuLagoon Tube BTC_NBT
 function get_nulagoon_btc_nbt($search_tolerance,$btc_usd) {
-$url_wall = 'https://bitbucket.org/henry_nu/data/downloads/datetu.json';
+$url_wall = 'https://raw.githubusercontent.com/henrynu/NlgTube/master/data/datetu.json';
 $content_wall = file_get_contents($url_wall);
 $wall_json = json_decode($content_wall, true); 
 
-$url_price = 'https://bitbucket.org/henry_nu/data/downloads/rd.json';
+$url_price = 'https://raw.githubusercontent.com/henrynu/NlgTube/master/data/rd.json';
 $content_price = file_get_contents($url_price);
 $price_json = json_decode($content_price, true); 
 

@@ -344,7 +344,7 @@ return($hitbtc_nbt_btc_24);
 //NuLagoon BTC/NBT
 function get_nulagoon_btc_nbt()
 {
-$url_price = 'https://bitbucket.org/henry_nu/data/downloads/rd.json';
+$url_price = 'https://raw.githubusercontent.com/henrynu/NlgTube/master/data/rd.json';
 $content_price = file_get_contents($url_price);
 $price_json = json_decode($content_price, true); 
 
