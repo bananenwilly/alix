@@ -1,0 +1,78 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #231f20; 
+    color: white;
+    margin: 20px;
+}
+h1 {
+	color:#ffb800;	
+    font-style: bold;
+}
+h2 {
+  color:white;
+  font-size: 20px;
+  font-style: bold;
+}
+p.explain {
+    color:#f9f9f9;
+    font-size: 13px;
+    font-style: italic;
+}
+footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:link { color: white; text-decoration: none}
+a:visited { color: white; text-decoration: none}
+a:hover { color: #ffb800; text-decoration: none}
+a:active { color: #000000; text-decoration: none}
+
+p.footer_link {
+    display: inline;
+}
+p.black_link {
+    color: #000000;
+    display: inline;
+}
+p.black_link:hover { color: #ffb800; text-decoration: none}
+
+table {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+table, th, td {
+    border: 1px solid #231f20;
+    border-collapse: collapse;
+}
+td {
+    padding: 4px;
+    text-align: right;
+    color: #231f20;
+}
+th {
+    padding: 4px;
+    text-align: right;
+}
+table.t01 tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table.t01 tr:nth-child(odd) {
+    background-color:#ffffff;
+}
+table.t01 th  {
+    background-color: #0074a0;
+    color: white;
+}
+
+input, button {
+    color: #0074a0;
+}
+
+#sidebar {
+    position:absolute;
+    top:0; bottom:0; left:0;
+    width:50px;
+}
