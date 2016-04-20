@@ -53,7 +53,7 @@ $json = json_decode($content, true);
  	{
 		$nbt_cny=$json['ticker']['last'];
 		$nbt_cny/=$btc_usd;
-		$nbt_cny*=0.985;
+		#$nbt_cny*=0.985; --removed by naglims request
 	}
 
 	if(!$nbt_cny){
